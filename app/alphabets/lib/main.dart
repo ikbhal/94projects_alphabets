@@ -1,3 +1,4 @@
+import 'package:alphabets/video_player_screen.dart';
 import 'package:flutter/material.dart';
 import 'barakhadi_data.dart';
 import 'barakhadi_screen.dart';
@@ -95,6 +96,18 @@ class _TestScreenState extends State<TestScreen> {
       appBar: AppBar(
         title: Text('Barakhadi'),
         actions: [
+
+           IconButton(
+              icon: Icon(Icons.video_library),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => VideoPlayerScreen(),
+                  ),
+                );
+              },
+            ),
           IconButton(
             icon: Icon(Icons.help),
             onPressed: () {
@@ -104,6 +117,8 @@ class _TestScreenState extends State<TestScreen> {
               );
             },
           ),
+
+
         ],
       ),
       body: Center(
