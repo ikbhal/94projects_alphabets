@@ -24,7 +24,6 @@ class TestScreen extends StatefulWidget {
 }
 
 class _TestScreenState extends State<TestScreen> {
- 
   String currentBarakhadi = '';
   List<String> wrongList = [];
   int correctScore = 0;
@@ -37,8 +36,8 @@ class _TestScreenState extends State<TestScreen> {
   }
 
   void generateRandomBarakhadi() {
-
-    final randomBarakhadi = BarakhadiData.generateRandomBarakhadiFromBarakhadiTable();
+    final randomBarakhadi =
+        BarakhadiData.generateRandomBarakhadiFromBarakhadiTable();
 
     setState(() {
       currentBarakhadi = randomBarakhadi;
@@ -96,18 +95,17 @@ class _TestScreenState extends State<TestScreen> {
       appBar: AppBar(
         title: Text('Barakhadi'),
         actions: [
-
-           IconButton(
-              icon: Icon(Icons.video_library),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => VideoPlayerScreen(),
-                  ),
-                );
-              },
-            ),
+          IconButton(
+            icon: Icon(Icons.video_library),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => VideoPlayerScreen(),
+                ),
+              );
+            },
+          ),
           IconButton(
             icon: Icon(Icons.help),
             onPressed: () {
@@ -117,8 +115,6 @@ class _TestScreenState extends State<TestScreen> {
               );
             },
           ),
-
-
         ],
       ),
       body: Center(
